@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84067BBD223B1387008738F4 /* MMAlbumListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BBC223B1387008738F4 /* MMAlbumListModel.swift */; };
+		84067BBF223B13AE008738F4 /* MMAlbumListViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BBE223B13AE008738F4 /* MMAlbumListViewModelContract.swift */; };
+		84067BC1223B13D2008738F4 /* MMAlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BC0223B13D2008738F4 /* MMAlbumListViewModel.swift */; };
+		84067BC3223B13F1008738F4 /* MMAlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BC2223B13F1008738F4 /* MMAlbumListViewController.swift */; };
+		84067BC7223B145B008738F4 /* MMTableViewCellAlbumListBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BC5223B145B008738F4 /* MMTableViewCellAlbumListBody.swift */; };
+		84067BC8223B145B008738F4 /* MMTableViewCellAlbumListBody.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84067BC6223B145B008738F4 /* MMTableViewCellAlbumListBody.xib */; };
 		889152DF223AC8AB00A094BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889152DE223AC8AB00A094BC /* AppDelegate.swift */; };
 		889152E1223AC8AB00A094BC /* MMHomeViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889152E0223AC8AB00A094BC /* MMHomeViewcontroller.swift */; };
 		889152E4223AC8AB00A094BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889152E2223AC8AB00A094BC /* Main.storyboard */; };
@@ -21,6 +27,12 @@
 		211FEA7628EDEE35FAE970C7 /* Pods-MediaMonksTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaMonksTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediaMonksTest/Pods-MediaMonksTest.release.xcconfig"; sourceTree = "<group>"; };
 		30D3E69F8D4C30B91FA8A6F6 /* Pods-MediaMonksTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaMonksTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediaMonksTest/Pods-MediaMonksTest.debug.xcconfig"; sourceTree = "<group>"; };
 		45936C50BC753DF0028260BB /* Pods_MediaMonksTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaMonksTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84067BBC223B1387008738F4 /* MMAlbumListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMAlbumListModel.swift; sourceTree = "<group>"; };
+		84067BBE223B13AE008738F4 /* MMAlbumListViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMAlbumListViewModelContract.swift; sourceTree = "<group>"; };
+		84067BC0223B13D2008738F4 /* MMAlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMAlbumListViewModel.swift; sourceTree = "<group>"; };
+		84067BC2223B13F1008738F4 /* MMAlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMAlbumListViewController.swift; sourceTree = "<group>"; };
+		84067BC5223B145B008738F4 /* MMTableViewCellAlbumListBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMTableViewCellAlbumListBody.swift; sourceTree = "<group>"; };
+		84067BC6223B145B008738F4 /* MMTableViewCellAlbumListBody.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMTableViewCellAlbumListBody.xib; sourceTree = "<group>"; };
 		889152DB223AC8AB00A094BC /* MediaMonksTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaMonksTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889152DE223AC8AB00A094BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889152E0223AC8AB00A094BC /* MMHomeViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMHomeViewcontroller.swift; sourceTree = "<group>"; };
@@ -51,6 +63,51 @@
 				211FEA7628EDEE35FAE970C7 /* Pods-MediaMonksTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		84067BB8223B1340008738F4 /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				84067BBB223B1359008738F4 /* Model */,
+				84067BBA223B1353008738F4 /* ViewModel */,
+				84067BB9223B134F008738F4 /* View */,
+			);
+			path = AlbumList;
+			sourceTree = "<group>";
+		};
+		84067BB9223B134F008738F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84067BC4223B1438008738F4 /* Cells */,
+				84067BC2223B13F1008738F4 /* MMAlbumListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84067BBA223B1353008738F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84067BBE223B13AE008738F4 /* MMAlbumListViewModelContract.swift */,
+				84067BC0223B13D2008738F4 /* MMAlbumListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84067BBB223B1359008738F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84067BBC223B1387008738F4 /* MMAlbumListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84067BC4223B1438008738F4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84067BC5223B145B008738F4 /* MMTableViewCellAlbumListBody.swift */,
+				84067BC6223B145B008738F4 /* MMTableViewCellAlbumListBody.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		889152D2223AC8AB00A094BC = {
@@ -98,6 +155,7 @@
 			children = (
 				889152E2223AC8AB00A094BC /* Main.storyboard */,
 				889152E0223AC8AB00A094BC /* MMHomeViewcontroller.swift */,
+				84067BB8223B1340008738F4 /* AlbumList */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -180,6 +238,7 @@
 			files = (
 				889152E9223AC8AD00A094BC /* LaunchScreen.storyboard in Resources */,
 				889152E6223AC8AD00A094BC /* Assets.xcassets in Resources */,
+				84067BC8223B145B008738F4 /* MMTableViewCellAlbumListBody.xib in Resources */,
 				889152E4223AC8AB00A094BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,9 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84067BC7223B145B008738F4 /* MMTableViewCellAlbumListBody.swift in Sources */,
+				84067BC3223B13F1008738F4 /* MMAlbumListViewController.swift in Sources */,
 				889152F2223AC91C00A094BC /* myBasicAnimation.swift in Sources */,
+				84067BC1223B13D2008738F4 /* MMAlbumListViewModel.swift in Sources */,
 				889152E1223AC8AB00A094BC /* MMHomeViewcontroller.swift in Sources */,
+				84067BBF223B13AE008738F4 /* MMAlbumListViewModelContract.swift in Sources */,
 				889152DF223AC8AB00A094BC /* AppDelegate.swift in Sources */,
+				84067BBD223B1387008738F4 /* MMAlbumListModel.swift in Sources */,
 				889152F7223ACD3600A094BC /* MMJsonplaceholderManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +447,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2BEC8V882;
 				INFOPLIST_FILE = MediaMonksTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ddg.MediaMonksTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -399,7 +466,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2BEC8V882;
 				INFOPLIST_FILE = MediaMonksTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ddg.MediaMonksTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
