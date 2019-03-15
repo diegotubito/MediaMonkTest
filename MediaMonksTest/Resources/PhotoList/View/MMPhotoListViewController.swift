@@ -1,34 +1,54 @@
 //
-//  MMAlbumListViewController.swift
+//  MMPhotoListViewController.swift
 //  MediaMonksTest
 //
 //  Created by David Diego Gomez on 14/3/19.
 //  Copyright © 2019 iMac. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class MMAlbumListViewController: UIViewController, MMAlbumListViewContract {
+
+class MMPhotoListViewController : UIViewController, MMPhotoListViewContract {
     
-    var viewModel : MMAlbumListViewModelContract!
-    @IBOutlet weak var tableView: UITableView!
+    
+    
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel : MMPhotoListViewModelContract!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        super .viewDidLoad()
+        tableView.register(MMTableViewCellPhotoList.nib, forCellReuseIdentifier: MMTableViewCellPhotoList.identifier)
         
-        tableView.register(MMTableViewCellAlbumListBody.nib, forCellReuseIdentifier: MMTableViewCellAlbumListBody.identifier)
+        
         viewModel.loadData()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationItem.title = "Album List"
+        navigationItem.title = "Photo List"
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        DispatchQueue.main.async {
+            self.showPopUpPhotoDetailView()
+        }
+        
+    }
+    
     
     func showError(_ message: String) {
         alertMessage(title: "Error", message: message)
+    }
+    
+    func reloadList() {
+        tableView.reloadData()
     }
     
     func showLoading() {
@@ -39,18 +59,10 @@ class MMAlbumListViewController: UIViewController, MMAlbumListViewContract {
         myActivityIndicator.stopAnimating()
     }
     
-    func reloadList() {
-        tableView.reloadData()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller = segue.destination as? MMPhotoListViewController {
-            controller.viewModel = MMPhotoListViewModel(withView: controller, selectedAlbum: viewModel.getSelectedAlbum())
-        }
-    }
 }
 
-extension MMAlbumListViewController {
+
+extension MMPhotoListViewController {
     func alertMessage(title: String, message: String) {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         
@@ -64,19 +76,19 @@ extension MMAlbumListViewController {
     
 }
 
-
-
-extension MMAlbumListViewController: UITableViewDataSource {
+extension MMPhotoListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getAlbumCount()
+        return viewModel.model.list.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: MMTableViewCellAlbumListBody.identifier, for: indexPath) as? MMTableViewCellAlbumListBody{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: MMTableViewCellPhotoList.identifier, for: indexPath) as? MMTableViewCellPhotoList{
             
-            cell.titleCell.text = viewModel.model.albums[indexPath.row].title
+            cell.viewCell.image = viewModel.model.list[indexPath.row].image
+            
+            
             return cell
         }
         
@@ -86,12 +98,18 @@ extension MMAlbumListViewController: UITableViewDataSource {
     
 }
 
-extension MMAlbumListViewController: UITableViewDelegate {
+extension MMPhotoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.setIndexSelectedAlbum(indexPath.row)
-        performSegue(withIdentifier: "segue_to_photo_list", sender: nil)
+        viewModel.setIndexSelection(indexPath.row)
+        showPopUpPhotoDetailView()
         
     }
     
+    func showPopUpPhotoDetailView() {
+       
+    }
+    
+    
     
 }
+

@@ -102,11 +102,52 @@
                     <connections>
                         <outlet property="myActivityIndicator" destination="z3i-PG-3lA" id="n0U-Zr-d1R"/>
                         <outlet property="tableView" destination="DUX-jO-tA5" id="NUW-Fu-ZjP"/>
+                        <segue destination="Wy3-3S-605" kind="show" identifier="segue_to_photo_list" id="IBk-ei-Moo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vv9-sa-5Ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3564" y="27"/>
+        </scene>
+        <!--Photo List View Controller-->
+        <scene sceneID="udC-7k-BKn">
+            <objects>
+                <viewController id="Wy3-3S-605" customClass="MMPhotoListViewController" customModule="MediaMonksTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3MF-bD-RIL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1DN-yd-QCb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wy3-3S-605" id="2UN-fC-cOm"/>
+                                    <outlet property="delegate" destination="Wy3-3S-605" id="0tX-GC-PmE"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Imo-lp-v9w">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dT3-sJ-Fve" firstAttribute="trailing" secondItem="1DN-yd-QCb" secondAttribute="trailing" id="1Mo-9X-NSH"/>
+                            <constraint firstItem="dT3-sJ-Fve" firstAttribute="bottom" secondItem="1DN-yd-QCb" secondAttribute="bottom" id="2hr-qZ-QYr"/>
+                            <constraint firstItem="Imo-lp-v9w" firstAttribute="centerY" secondItem="3MF-bD-RIL" secondAttribute="centerY" id="Z7D-nJ-Du3"/>
+                            <constraint firstItem="1DN-yd-QCb" firstAttribute="leading" secondItem="dT3-sJ-Fve" secondAttribute="leading" id="eZ4-95-fFI"/>
+                            <constraint firstItem="1DN-yd-QCb" firstAttribute="top" secondItem="dT3-sJ-Fve" secondAttribute="top" id="tNu-wU-PG3"/>
+                            <constraint firstItem="Imo-lp-v9w" firstAttribute="centerX" secondItem="3MF-bD-RIL" secondAttribute="centerX" id="zhE-fX-8Ob"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dT3-sJ-Fve"/>
+                    </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="Imo-lp-v9w" id="bLB-Ie-bO4"/>
+                        <outlet property="tableView" destination="1DN-yd-QCb" id="ZDD-qd-LxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Rq-pV-5Jl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4447" y="25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eAf-p7-fs1">

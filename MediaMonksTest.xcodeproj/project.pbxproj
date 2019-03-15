@@ -13,6 +13,12 @@
 		84067BC3223B13F1008738F4 /* MMAlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BC2223B13F1008738F4 /* MMAlbumListViewController.swift */; };
 		84067BC7223B145B008738F4 /* MMTableViewCellAlbumListBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BC5223B145B008738F4 /* MMTableViewCellAlbumListBody.swift */; };
 		84067BC8223B145B008738F4 /* MMTableViewCellAlbumListBody.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84067BC6223B145B008738F4 /* MMTableViewCellAlbumListBody.xib */; };
+		84067BCE223B1FBA008738F4 /* MMPhotoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BCD223B1FBA008738F4 /* MMPhotoListModel.swift */; };
+		84067BD0223B1FC9008738F4 /* MMPhotoListViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BCF223B1FC9008738F4 /* MMPhotoListViewModelContract.swift */; };
+		84067BD2223B1FD9008738F4 /* MMPhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BD1223B1FD9008738F4 /* MMPhotoListViewModel.swift */; };
+		84067BD4223B1FE8008738F4 /* MMPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BD3223B1FE8008738F4 /* MMPhotoListViewController.swift */; };
+		84067BD8223B2044008738F4 /* MMTableViewCellPhotoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BD6223B2044008738F4 /* MMTableViewCellPhotoList.swift */; };
+		84067BD9223B2044008738F4 /* MMTableViewCellPhotoList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84067BD7223B2044008738F4 /* MMTableViewCellPhotoList.xib */; };
 		889152DF223AC8AB00A094BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889152DE223AC8AB00A094BC /* AppDelegate.swift */; };
 		889152E1223AC8AB00A094BC /* MMHomeViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889152E0223AC8AB00A094BC /* MMHomeViewcontroller.swift */; };
 		889152E4223AC8AB00A094BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889152E2223AC8AB00A094BC /* Main.storyboard */; };
@@ -33,6 +39,12 @@
 		84067BC2223B13F1008738F4 /* MMAlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMAlbumListViewController.swift; sourceTree = "<group>"; };
 		84067BC5223B145B008738F4 /* MMTableViewCellAlbumListBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMTableViewCellAlbumListBody.swift; sourceTree = "<group>"; };
 		84067BC6223B145B008738F4 /* MMTableViewCellAlbumListBody.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMTableViewCellAlbumListBody.xib; sourceTree = "<group>"; };
+		84067BCD223B1FBA008738F4 /* MMPhotoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMPhotoListModel.swift; sourceTree = "<group>"; };
+		84067BCF223B1FC9008738F4 /* MMPhotoListViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMPhotoListViewModelContract.swift; sourceTree = "<group>"; };
+		84067BD1223B1FD9008738F4 /* MMPhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMPhotoListViewModel.swift; sourceTree = "<group>"; };
+		84067BD3223B1FE8008738F4 /* MMPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMPhotoListViewController.swift; sourceTree = "<group>"; };
+		84067BD6223B2044008738F4 /* MMTableViewCellPhotoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMTableViewCellPhotoList.swift; sourceTree = "<group>"; };
+		84067BD7223B2044008738F4 /* MMTableViewCellPhotoList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMTableViewCellPhotoList.xib; sourceTree = "<group>"; };
 		889152DB223AC8AB00A094BC /* MediaMonksTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaMonksTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889152DE223AC8AB00A094BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889152E0223AC8AB00A094BC /* MMHomeViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMHomeViewcontroller.swift; sourceTree = "<group>"; };
@@ -110,6 +122,51 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		84067BC9223B1F77008738F4 /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+				84067BCC223B1F91008738F4 /* Model */,
+				84067BCB223B1F8A008738F4 /* ViewModel */,
+				84067BCA223B1F86008738F4 /* View */,
+			);
+			path = PhotoList;
+			sourceTree = "<group>";
+		};
+		84067BCA223B1F86008738F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84067BD5223B2029008738F4 /* Cells */,
+				84067BD3223B1FE8008738F4 /* MMPhotoListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84067BCB223B1F8A008738F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84067BCF223B1FC9008738F4 /* MMPhotoListViewModelContract.swift */,
+				84067BD1223B1FD9008738F4 /* MMPhotoListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84067BCC223B1F91008738F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84067BCD223B1FBA008738F4 /* MMPhotoListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84067BD5223B2029008738F4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84067BD6223B2044008738F4 /* MMTableViewCellPhotoList.swift */,
+				84067BD7223B2044008738F4 /* MMTableViewCellPhotoList.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		889152D2223AC8AB00A094BC = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +213,7 @@
 				889152E2223AC8AB00A094BC /* Main.storyboard */,
 				889152E0223AC8AB00A094BC /* MMHomeViewcontroller.swift */,
 				84067BB8223B1340008738F4 /* AlbumList */,
+				84067BC9223B1F77008738F4 /* PhotoList */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -236,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84067BD9223B2044008738F4 /* MMTableViewCellPhotoList.xib in Resources */,
 				889152E9223AC8AD00A094BC /* LaunchScreen.storyboard in Resources */,
 				889152E6223AC8AD00A094BC /* Assets.xcassets in Resources */,
 				84067BC8223B145B008738F4 /* MMTableViewCellAlbumListBody.xib in Resources */,
@@ -289,10 +348,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84067BD8223B2044008738F4 /* MMTableViewCellPhotoList.swift in Sources */,
+				84067BD4223B1FE8008738F4 /* MMPhotoListViewController.swift in Sources */,
 				84067BC7223B145B008738F4 /* MMTableViewCellAlbumListBody.swift in Sources */,
+				84067BD2223B1FD9008738F4 /* MMPhotoListViewModel.swift in Sources */,
 				84067BC3223B13F1008738F4 /* MMAlbumListViewController.swift in Sources */,
+				84067BD0223B1FC9008738F4 /* MMPhotoListViewModelContract.swift in Sources */,
 				889152F2223AC91C00A094BC /* myBasicAnimation.swift in Sources */,
 				84067BC1223B13D2008738F4 /* MMAlbumListViewModel.swift in Sources */,
+				84067BCE223B1FBA008738F4 /* MMPhotoListModel.swift in Sources */,
 				889152E1223AC8AB00A094BC /* MMHomeViewcontroller.swift in Sources */,
 				84067BBF223B13AE008738F4 /* MMAlbumListViewModelContract.swift in Sources */,
 				889152DF223AC8AB00A094BC /* AppDelegate.swift in Sources */,
