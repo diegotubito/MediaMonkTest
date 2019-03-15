@@ -19,6 +19,8 @@
 		84067BD4223B1FE8008738F4 /* MMPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BD3223B1FE8008738F4 /* MMPhotoListViewController.swift */; };
 		84067BD8223B2044008738F4 /* MMTableViewCellPhotoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BD6223B2044008738F4 /* MMTableViewCellPhotoList.swift */; };
 		84067BD9223B2044008738F4 /* MMTableViewCellPhotoList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84067BD7223B2044008738F4 /* MMTableViewCellPhotoList.xib */; };
+		84067BDC223B2C3B008738F4 /* MLPopUpCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84067BDB223B2C3B008738F4 /* MLPopUpCustomView.swift */; };
+		84067BDE223B2C52008738F4 /* MLPopUpCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84067BDD223B2C52008738F4 /* MLPopUpCustomView.xib */; };
 		889152DF223AC8AB00A094BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889152DE223AC8AB00A094BC /* AppDelegate.swift */; };
 		889152E1223AC8AB00A094BC /* MMHomeViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889152E0223AC8AB00A094BC /* MMHomeViewcontroller.swift */; };
 		889152E4223AC8AB00A094BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889152E2223AC8AB00A094BC /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		84067BD3223B1FE8008738F4 /* MMPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMPhotoListViewController.swift; sourceTree = "<group>"; };
 		84067BD6223B2044008738F4 /* MMTableViewCellPhotoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMTableViewCellPhotoList.swift; sourceTree = "<group>"; };
 		84067BD7223B2044008738F4 /* MMTableViewCellPhotoList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMTableViewCellPhotoList.xib; sourceTree = "<group>"; };
+		84067BDB223B2C3B008738F4 /* MLPopUpCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLPopUpCustomView.swift; sourceTree = "<group>"; };
+		84067BDD223B2C52008738F4 /* MLPopUpCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLPopUpCustomView.xib; sourceTree = "<group>"; };
 		889152DB223AC8AB00A094BC /* MediaMonksTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaMonksTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889152DE223AC8AB00A094BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889152E0223AC8AB00A094BC /* MMHomeViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMHomeViewcontroller.swift; sourceTree = "<group>"; };
@@ -167,6 +171,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		84067BDA223B2C08008738F4 /* MyCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				84067BDB223B2C3B008738F4 /* MLPopUpCustomView.swift */,
+				84067BDD223B2C52008738F4 /* MLPopUpCustomView.xib */,
+			);
+			path = MyCustomView;
+			sourceTree = "<group>";
+		};
 		889152D2223AC8AB00A094BC = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +214,7 @@
 		889152F0223AC90A00A094BC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				84067BDA223B2C08008738F4 /* MyCustomView */,
 				889152F5223ACD1C00A094BC /* PlaceHolder */,
 				889152F1223AC91C00A094BC /* myBasicAnimation.swift */,
 			);
@@ -295,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84067BD9223B2044008738F4 /* MMTableViewCellPhotoList.xib in Resources */,
+				84067BDE223B2C52008738F4 /* MLPopUpCustomView.xib in Resources */,
 				889152E9223AC8AD00A094BC /* LaunchScreen.storyboard in Resources */,
 				889152E6223AC8AD00A094BC /* Assets.xcassets in Resources */,
 				84067BC8223B145B008738F4 /* MMTableViewCellAlbumListBody.xib in Resources */,
@@ -350,6 +365,7 @@
 			files = (
 				84067BD8223B2044008738F4 /* MMTableViewCellPhotoList.swift in Sources */,
 				84067BD4223B1FE8008738F4 /* MMPhotoListViewController.swift in Sources */,
+				84067BDC223B2C3B008738F4 /* MLPopUpCustomView.swift in Sources */,
 				84067BC7223B145B008738F4 /* MMTableViewCellAlbumListBody.swift in Sources */,
 				84067BD2223B1FD9008738F4 /* MMPhotoListViewModel.swift in Sources */,
 				84067BC3223B13F1008738F4 /* MMAlbumListViewController.swift in Sources */,

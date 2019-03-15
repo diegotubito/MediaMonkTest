@@ -15,6 +15,7 @@ class MMPhotoListViewController : UIViewController, MMPhotoListViewContract {
     
     
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
+    var detailPhotoView : MLPopUpCustomView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -106,10 +107,34 @@ extension MMPhotoListViewController: UITableViewDelegate {
     }
     
     func showPopUpPhotoDetailView() {
-       
+        if viewModel.model.indexSelectedPhoto == nil {return}
+        
+        if detailPhotoView != nil {
+            detailPhotoView.removeFromSuperview()
+        }
+        detailPhotoView = MLPopUpCustomView(frame: CGRect.zero)
+        detailPhotoView.initialize()
+        detailPhotoView.delegate = self
+        view.addSubview(detailPhotoView)
+        
+        detailPhotoView.translatesAutoresizingMaskIntoConstraints = false
+        detailPhotoView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        detailPhotoView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        detailPhotoView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        detailPhotoView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        self.detailPhotoView.showData(data: self.viewModel.model.list[viewModel.model.indexSelectedPhoto!])
     }
     
     
     
 }
 
+
+extension MMPhotoListViewController: MLPopUpCustomViewDelegate {
+    func finishedView() {
+        viewModel.setIndexSelection(nil)
+    }
+    
+    
+}
