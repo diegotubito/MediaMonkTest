@@ -18,7 +18,7 @@ class MMHomeViewController: UIViewController {
     }
     
     @IBAction func albumListButtonPressed(_ sender: Any) {
-    //    performSegue(withIdentifier: "segue_to_album_list", sender: nil)
+        performSegue(withIdentifier: "segue_to_album_list", sender: nil)
     }
     
     
@@ -38,7 +38,9 @@ class MMHomeViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+        if let controller = segue.destination as? MMAlbumListViewController {
+            controller.viewModel = MMAlbumListViewModel(withView: controller)
+        }
     }
 }
 
